@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>ExeL</title>
+    <link rel="stylesheet" href="./style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="./node_modules/codemirror/lib/codemirror.css">
+  </head>
+  <body>
+    <main>
+    <section id="exel__container_frame" class="w-6">
+      <iframe id="exel__preview_frame">
+      </iframe>
+    </section>
+    <div class="exel__edit_frame_break exel__edit_frame_break--vert"></div>
+    <section class="exel__container_frame w-6">
+      <div class="exel__edit_frame" id="exel__html_frame">
+        <div class="edit_frame__top_bar_menu">
+          <ul class="top_bar_menu__menu_options">
+            <li class="menu_options__item">  
+              <div class="edit_frame__options edit_frame__options--bubble">
+                <span>HTML</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <textarea
+          class="edit_frame__textarea"
+          id="html_frame__textarea"
+          name="html"></textarea>
+      </div>
+      <div class="exel__edit_frame_break exel__edit_frame_break--horz"></div>
+      <div class="exel__edit_frame" id="exel__css_frame">
+        <div class="edit_frame__top_bar_menu">
+          <ul class="top_bar_menu__menu_options">
+            <li class="menu_options__item">  
+              <div class="edit_frame__options edit_frame__options--bubble">
+                <span>CSS</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <textarea
+          class="edit_frame__textarea"
+          id="css_frame__textarea"
+          name="css"></textarea>
+      </div>
+      <div class="exel__edit_frame_break exel__edit_frame_break--horz"></div>
+      <div class="exel__edit_frame" id="exel__javascript_frame">
+        <div class="edit_frame__top_bar_menu">
+          <ul class="top_bar_menu__menu_options">
+            <li class="menu_options__item">  
+              <div class="edit_frame__options edit_frame__options--bubble">
+                <span>Javascript</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <textarea 
+          class="edit_frame__textarea"
+          id="javascript_frame__textarea"
+          name="javascript"></textarea>
+      </div>
+    </section>
+    <button id="exel__update_button">Update</button>
+    </main>
+    <script type="text/javascript" charset="utf-8">
+      require('./renderer.js');
+    </script>
+  </body>
+</html>

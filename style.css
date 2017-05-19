@@ -1,0 +1,75 @@
+html, body, main {
+  margin:  0;
+  height: 100%;
+}
+
+main {
+  display: flex;
+}
+
+.edit_frame__top_bar_menu {
+  z-index: 10;
+  background: #AFAFAF;
+  height: 24px;
+}
+
+#exel__preview_frame {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.edit_frame__top_bar_menu .top_bar_menu__menu_options {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+}
+
+.exel__edit_frame_break {
+  background-color: #AEAEAE;
+}
+
+.exel__edit_frame_break--horz {
+  width: 100%;
+  height: 2px;
+}
+
+.exel__edit_frame_break--vert {
+  width: 2px;
+  height: 100;
+  display: inline;
+}
+
+.edit_frame__options {
+  position: absolute;
+  right: 0;
+}
+
+.exel__edit_frame .CodeMirror {
+  height: calc(100% - 24px);
+}
+
+.exel__edit_frame {
+  position: relative;
+  width: 100%;
+  height: calc(100%/3);
+}
+
+.exel__edit_frame .edit_frame__textarea {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  resize: none;
+  outline: none;
+}
+
+.exel__container_frame {
+  flex-flow: column wrap;
+}
+
+.w-6 {
+  width: 50%;  
+}
