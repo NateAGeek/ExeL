@@ -6,7 +6,7 @@ let CodeMirror = require('codemirror');
 let Mousetrap  = require('mousetrap');
 
 
-let ExeLEngine = {
+ExeLEngine = {
   init: function() {
     //Set the local scope vars
     this.previewContainer = document.getElementById("exel__container_frame");
@@ -92,17 +92,16 @@ ExeLEngineTextEditor = {
 
 };
 
+function update(cm){
+  console.log(cm);
+}
+
 function main() {
   ExeLEngine.init();
  
-  console.log(Mousetrap);
   Mousetrap.bind(['command+s', 'ctrl+s'], function(e) {
     ExeLEngine.previewUpdate();
   });
-
-  let updateButton = document.getElementById("exel__update_button");
-  updateButton.addEventListener("click", function(event){
-    ExeLEngine.previewUpdate();
-  });
+  ExeLEngine.htmlFrame.addKeyMap({"Ctrl-S":'update'});
 }
 main();
